@@ -5,7 +5,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 client.user.setGame(`تجارب`,"http://twitch.tv/Death Shop")
 });
-var prefix = "f"
+var prefix = "-"
 client.on('message', message => {
   if (message.author.xErenaa) return;
   if (!message.content.startsWith(prefix)) return;
