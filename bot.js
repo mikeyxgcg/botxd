@@ -4,7 +4,6 @@ const client = new Discord.Client();
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
-
 var prefix = "f"
 client.on('message', message => {
   if (message.author.xErenaa) return;
@@ -45,11 +44,12 @@ client.on('message', message => {
 }
 });
 
+
 client.on('message', message => {
   if (message.guild) {
  let embed = new Discord.RichEmbed()
   let args = message.content.split(' ').slice(1).join(' ');
-if(message.content.split(' ')[0] == prefix + 'bc') {
+if(message.content.split(' ')[0] == f + 'bc') {
   if (!args[1]) {
 message.channel.send("Usage: !bc [message]");
 return;
