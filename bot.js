@@ -73,10 +73,11 @@ password : **${random2}**
 });
 
 message.channel.send("**تم الارسال الحساب في الخاص | ☑ **")
-}});
+}}); 
 
-client.on('message', message => {
-    var prefix = "-";
+     
+ client.on('message', message => {
+    var prefix = "$";
    
         if (message.author.id === client.user.id) return;
         if (message.guild) {
@@ -94,10 +95,13 @@ client.on('message', message => {
                 .addField('» المرسل : ', `${message.author.username}#${message.author.discriminator}`)
                 .addField(' » الرسالة : ', args)
                 .setColor('#ff0000')
-                // m.send(`[${m}]`)
-                m.send(`${m}`,{embed: bc}   
-}); 
-              
-     
-      
+                // m.send(`[${m}]`);
+                m.send(`${m}`,{embed: bc});
+            });
+        }
+        } else {
+            return;
+        }
+    });
+
 client.login(process.env.BOT_TOKEN);
