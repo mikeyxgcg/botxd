@@ -104,4 +104,28 @@ message.channel.send("**تم الارسال الحساب في الخاص | ☑ *
         }
     });
 
+
+client.on('message', msg => {
+  if (msg.content === '$help') {
+    msg.author.send(`
+● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
+                        
+$server 『معلومات عن السيرفر』                      
+
+$brodcast 『 ارسال رساله جمعايه في الخاص 』
+
+$cl『 قفل الشات 』
+
+$op『فتح الشات 』
+
+$clear 『 لمسح الشات 』
+
+&say 『لي يكرر الكلام الذي تقوله』  تم ايقافها
+
+● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ●  
+    
+    `);
+  }
+});
+
 client.login(process.env.BOT_TOKEN);
