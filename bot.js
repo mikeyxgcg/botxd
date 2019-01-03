@@ -94,25 +94,25 @@ client.on('message', message => {
                 .addField('» المرسل : ', `${message.author.username}#${message.author.discriminator}`)
                 .addField(' » الرسالة : ', args)
                 .setColor('#ff0000')
-                // m.send(`[${m}]`);
-                m.send(`${m}`,{embed: bc}    
-      
+                // m.send(`[${m}]`)
+                m.send(`${m}`,{embed: bc}   
+});                     
        client.on('message', msg => {
   if (msg.content === '-help') {
     msg.author.send(`
 ● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
                         
-$server 『معلومات عن السيرفر』                      
+-server 『معلومات عن السيرفر』                      
 
-$brodcast 『 ارسال رساله جمعايه في الخاص 』
+-brodcast 『 ارسال رساله جمعايه في الخاص 』
 
-$cl『 قفل الشات 』
+-cl『 قفل الشات 』
 
-$op『فتح الشات 』
+-op『فتح الشات 』
 
-$clear 『 لمسح الشات 』
+-clear 『 لمسح الشات 』
 
-&say 『لي يكرر الكلام الذي تقوله』  تم ايقافها
+-say 『لي يكرر الكلام الذي تقوله』  تم ايقافها
 
 ● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ●  
     
