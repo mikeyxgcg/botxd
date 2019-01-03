@@ -74,10 +74,9 @@ password : **${random2}**
 message.channel.send("**تم الارسال الحساب في الخاص | ☑ **")
 }});
 
-
-console.log('bot is ready');
-client.user.setGame(`Hythobot `,"http://twitch.tv/S-F")
-});
-
-
+ if (message.content.startsWith('(prefix)st')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/idk");
+      message.channel.send(`**✅**`)
+   
+   
 client.login(process.env.BOT_TOKEN);
