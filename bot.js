@@ -5,7 +5,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-var prefix = "البريفكس الي انت عايزه"
+var prefix = "f"
 client.on('message', message => {
   if (message.author.xErenaa) return;
   if (!message.content.startsWith(prefix)) return;
