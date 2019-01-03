@@ -96,7 +96,8 @@ client.on('message', message => {
                 .setColor('#ff0000')
                 // m.send(`[${m}]`)
                 m.send(`${m}`,{embed: bc}   
-});                     
+}); 
+              
        client.on('message', msg => {
   if (msg.content === '-help') {
     msg.author.send(`
