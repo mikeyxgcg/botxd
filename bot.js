@@ -74,9 +74,5 @@ password : **${random2}**
 message.channel.send("**تم الارسال الحساب في الخاص | ☑ **")
 }});
 
- if (message.content.startsWith('(prefix)st')) {
-    client.user.setGame(argresult, "https://www.twitch.tv/idk");
-      message.channel.send(`**✅**`)
-   
-   
+
 client.login(process.env.BOT_TOKEN);
