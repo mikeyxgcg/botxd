@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame(`تجارب`,"http://twitch.tv/Death Shop")
+  ClientUser#setActivity(`تجارب`,"http://twitch.tv/Death Shop")
 });
 var prefix = "f"
 client.on('message', message => {
