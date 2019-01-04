@@ -5,6 +5,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 client.user.setGame(`HythoBot`,"http://twitch.tv/Death Shop")
 });
+
 var prefix = "-"
 client.on('message', message => {
   if (message.author.xErenaa) return;
