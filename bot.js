@@ -131,7 +131,7 @@ client.on('message', msg => {
 
 client.on('message', message => {
     if(message.content === 'رابط'){
-        message.channel.send('https://discordapp.com/oauth2/authorize?client_id=530340243694419970&permissions=268435488&scope=bot')
+        message.channel.send('```https://discordapp.com/oauth2/authorize?client_id=530340243694419970&permissions=268435488&scope=bot```')
     }
 });
 
