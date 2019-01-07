@@ -129,4 +129,10 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', message => {
+    if(message.content === '-invite'){
+        message.channel.send('https://discordapp.com/oauth2/authorize?client_id=530340243694419970&permissions=268435488&scope=bot')
+    }
+});
+
 client.login(process.env.BOT_TOKEN);
