@@ -137,7 +137,7 @@ client.on('message', message => {
 
 client.on('message', msg => {
   if (msg.content === 'hello') {
-    msg.reply('**Welcome to HythoServer**');
+    msg.reply('**Welcome to HythoServer name**');
   }
 });
 
