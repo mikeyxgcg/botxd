@@ -627,7 +627,7 @@ client.on('message',function(message) {
            muteMember.removeRole(muteRole)
            muteMember.setMute(false)
        }, mmss(muteDuration));
-       });
+      
    }
 });
 
