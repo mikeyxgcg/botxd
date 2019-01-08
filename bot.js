@@ -143,7 +143,7 @@ client.on('message', msg => {
 
 client.on('message', message => {
    if(message.channel.type === "dm") return;
-     if(message.content.startsWith ("!زواج")) {
+     if(message.content.startsWith ("-زواج")) {
      if(!message.channel.guild) return message.reply(' This command only for servers ')
      var proposed = message.mentions.members.first()
  
@@ -177,14 +177,14 @@ message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
 
 client.on("message", message => {
                                     var prefix = "-";
-                                 if (message.content === "!help") {
+                                 if (message.content === "-help") {
                                      message.channel.send('');
                                   const embed = new Discord.RichEmbed() 
                                       .setColor("RANDOM")
                                       .setDescription(`
                                       __**ٍHythobot Games Commands**__
-                                      **『 !لعبة مريم __|__ مريم 』
-                                      『 !لعبة الزواج __|__ زواج 』
+                                      
+                                      **『 !لعبة الزواج __|__ زواج 』
                                       『 !لعبة صراحة __|__ صراحة 』
 									  『 !rps __|__ لعبة حجر ورقة مقص 』
 									  『 !لعبة اسئلة فورت نايت __|__ فورت نايت 』
@@ -428,7 +428,7 @@ const pubg = [
 ]
    client.on('message', message => {
        if (message.author.bot) return;
- if (message.content.startsWith('!فورت نايت')) {
+ if (message.content.startsWith('-فورت نايت')) {
      if(!message.channel.guild) return message.reply('** This command only for servers **');
   var client= new Discord.RichEmbed()
   .setTitle("لعبه اسئله فورت نايت")
