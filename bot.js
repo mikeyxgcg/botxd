@@ -123,6 +123,7 @@ client.on('message', msg => {
 
 -say 『لي يكرر الكلام الذي تقوله』  تم ايقافها
 
+**The Bot By @Hytḧ҉̶͞o|HaY̷͟͠tͪͮ̍hom̋̃̾_YT#6747  and @**Zinx I Friendly**
 ● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ●  
     
     `);
@@ -484,8 +485,11 @@ const secre = [
     }
 });
 
+const credits = JSON.parse(fs.readFileSync("./creditsCode.json", "utf8"));
+const coolDown = new Set();
+
 client.on('message',async message => {
-var prefix = "-"
+var prefix = "!"
     
 if(message.author.bot) return;
 if(!credits[message.author.id]) credits[message.author.id] = {
@@ -531,6 +535,12 @@ client.on('message', async message => {
        coolDown.remove(message.author.id);
     },86400000);
     }
+});
+
+client.on('message', msg => {
+  if (msg.content === '-hsupport') {
+    msg.author.send(`https://discord.gg/ReS4sD`);
+  }
 });
 
 client.login(process.env.BOT_TOKEN);
