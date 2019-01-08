@@ -142,6 +142,7 @@ client.on('message', msg => {
 });
 
 client.on('message', message => {
+	   var prefix = "-";
    if(message.channel.type === "dm") return;
      if(message.content.startsWith ("-زواج")) {
      if(!message.channel.guild) return message.reply(' This command only for servers ')
@@ -184,7 +185,7 @@ client.on("message", message => {
                                       .setDescription(`
                                       __**ٍHythobot Games Commands**__
                                       
-                                      **『 !لعبة الزواج __|__ زواج 』
+                                      **『 -لعبة الزواج __|__ زواج 』
                                       『 !لعبة صراحة __|__ صراحة 』
 									  『 !rps __|__ لعبة حجر ورقة مقص 』
 									  『 !لعبة اسئلة فورت نايت __|__ فورت نايت 』
