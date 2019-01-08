@@ -577,7 +577,6 @@ const ms = require("ms");
  
 });
  
- 
 client.on('message',function(message) {
  if(!message.channel.guild) return;    let messageArray = message.content.split(' ');
     let muteRole =  message.guild.roles.find('name', 'Muted');
