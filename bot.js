@@ -601,7 +601,5 @@ client.on('message',function(message) {
            muteMember.setMute(false)
        }, mmss(muteDuration));
        });
-   }
-});
 
 client.login(process.env.BOT_TOKEN);
