@@ -568,13 +568,6 @@ client.on("message", message => {
   } else {
     message.guild.member(user).removeRole(muteRole).then(() => {
       return message.reply("User Has Been UnMuted.").catch(console.error).then(message => message.delete(4000))
-    });
-  }
- 
-};
- 
-});
-
 client.on('message',function(message) {
  if(!message.channel.guild) return;    let messageArray = message.content.split(' ');
     let muteRole =  message.guild.roles.find('name', 'Muted');
