@@ -537,7 +537,7 @@ client.on("message", message => {
 client.on('message',async message => {
     const moment = require('moment');
 const ms = require('ms')
-    var prefix = '$' // البريفكس
+    var prefix = '-' // البريفكس
   var time = moment().format('Do MMMM YYYY , hh:mm');
   var room;
   var title;
