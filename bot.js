@@ -512,7 +512,7 @@ var prefix = "-";
 });
 
 client.on("message", message => {
-    var prefix = "$";
+    var prefix = "-";
  
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "clear")) {
@@ -526,7 +526,7 @@ client.on("message", message => {
         color: 0x00a300,
         description: ":white_check_mark: | Delete " + args[1] + " Message!",
         footer: {
-          text: "اسم بوتك هنا"
+          text: "HythoBot"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
