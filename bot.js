@@ -547,6 +547,7 @@ client.on("message", message => {
 
      
 });
+
  = require("ms");
   client.on("message", message => {
  if(!message.channel.guild) return;  
