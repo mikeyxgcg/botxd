@@ -477,5 +477,10 @@ const secre = [
   console.log('[id] Send By: ' + message.author.username)
     }
 });
+client.on('message', msg => {
+  if (msg.content === '-hsupport') {
+    msg.author.send(`https://discord.gg/ReS4sD`)
+ }
+});
 
 client.login(process.env.BOT_TOKEN);
