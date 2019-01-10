@@ -627,4 +627,23 @@ hours = 12;
   }
 });
 
+client.on('message', message => {
+const myID = "421034759003832330";
+  if(!message.channel.guild) return;
+let args = message.content.split(' ').slice(1).join(' ');
+if (message.content.startsWith('-bca')){
+message.channel.sendMessage('جار ارسال الرسالة |✅')
+client.users.forEach(m =>{
+var bc = new
+Discord.RichEmbed()
+.setColor('RANDOM')
+.setTitle('Broadcast')
+.addField('السيرفر:', message.guild.name)
+.addField('المرسل:', message.author.username)
+.addField('الرسالة:', args)
+m.send({ embed: bc })
+})
+}
+});
+
 client.login(process.env.BOT_TOKEN);
