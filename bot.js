@@ -755,4 +755,10 @@ message.channel.sendEmbed(id);
  
 });
 
+client.on('message', msg => {
+  if (msg.content === 'هيثو كفوالحين صرت محترم') {
+    msg.reply('**كل زق اقولك**');
+  }
+});
+
 client.login(process.env.BOT_TOKEN);
