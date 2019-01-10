@@ -686,4 +686,25 @@ client.on('message', function(msg) {
   }
 });
 
+client.on('message', message => {
+ 
+    if (message.content === "-bot") {
+var year = message.guild.createdAt.getFullYear()
+var month = message.guild.createdAt.getMonth()
+var day = message.guild.createdAt.getDate()
+    let embed = new Discord.RichEmbed()
+ 
+.addField('**Bot Servers**',`[ ${client.guilds.size} ]`)
+.addField('**Users**',`[ ${client.users.size} ]`)
+.addField('**Channels**',`[ ${client.channels.size} ]`)
+.addField('**ID**',`[ ${client.user.id} ]`)
+.addField('**Name**',`[ ${client.user.tag} ]`)
+.addField('Requested by:', "<@" + message.author.id + ">")
+.setColor("#51cde6")
+.setDescription(`${message.guild.name}`)
+     message.channel.sendEmbed(embed);
+}
+ 
+});
+
 client.login(process.env.BOT_TOKEN);
