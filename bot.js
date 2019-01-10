@@ -259,7 +259,7 @@ const Sra7a = [
         if (message.content.startsWith(prefix + 'صراحه')) {
             if(!message.channel.guild) return message.reply('** This command only for servers **');
          var client= new Discord.RichEmbed()
-         .setTitle("Alpha")
+         .setTitle("HythoBot")
          .setColor('RANDOM')
          .setDescription(`${Sra7a[Math.floor(Math.random() * Sra7a.length)]}`)
          .setImage("https://cdn.discordapp.com/attachments/371269161470525444/384103927060234242/125.png")
