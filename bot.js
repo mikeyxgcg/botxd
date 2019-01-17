@@ -17,7 +17,7 @@ client.on('ready', () => {
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = [`${client.guilds.size} Server`,' Premium Bot™ by n3k4a & Baron','Type -help |-support |-invite ',`${client.users.size} Members`,'-invite','By: n3k4a & Hosam | BaronTube'];
+    var setGame = [`${client.guilds.size} Server`,' Premium Bot™ by Friendly & Hythom','Type -help |-support |-invite ',`${client.users.size} Members`,'-invite','By: n3k4a & Hosam | BaronTube'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -521,8 +521,8 @@ client.on("message", message => {
  if (message.content === "-invite") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
-      .setFooter('© Premium Bot :heart: جميع الحقوق محفوظة 2018 لــبوت')
-      .addField('شكرا لك لاستخدامك ل بروميوم بوت', `https://modest-lewin-146a75.netlify.com`)
+      .setFooter('© HythoBot :heart: جميع الحقوق محفوظة 2019 لــبوت')
+      .addField('شكرا لك لاستخدامك ل هيثو بوت', `https://discordapp.com/oauth2/authorize?client_id=530340243694419970&permissions=268435488&scope=bot`)
   message.author.send({embed});
 
  }
@@ -557,13 +557,13 @@ client.on('message',message =>{
   });
 
 client.on("message", message => {
- if (message.content === "-support") {
+ if (message.content === "-hsupport") {
   const embed = new Discord.RichEmbed()
       .setTitle('Click here')
-      .setURL(' https://discord.gg/ZnPDHaA ')
+      .setURL(' https://discord.gg/6x8aNmE ')
       .setColor("RANDOM")
-      .setFooter('© Premium Bot :heart: جميع الحقوق محفوظة 2018 لــبوت')  
-      .addField('سيرفر الدعم الفني', ` https://discord.gg/ZnPDHaA  `)
+      .setFooter('© HytoBot :heart: جميع الحقوق محفوظة 2018 لــبوت')  
+      .addField('سيرفر الدعم الفني', ` https://discord.gg/6x8aNmE  `)
   message.author.send({embed});
 
  }
@@ -683,7 +683,7 @@ client.on('message', message => {
             .addField('`` السيرفرات🏢``', [client.guilds.size], true)
             .addField('``الشنلات💻``' , `[ ${client.channels.size} ]` , true)
             .addField('``اعضاء السيرفر 👨‍👨‍👧‍👧``' ,`[ ${client.users.size} ]` , true)
-            .addField('``Premium Bot اسمي هوا📇``' , `[ ${client.user.tag} ]` , true)
+            .addField('``HythoBot اسمي هوا📇``' , `[ ${client.user.tag} ]` , true)
             .addField('``الايدي تبعي ☑️``' , `[ ${client.user.id} ]` , true)
 			      .addField('``امر تشغيلي ➡️``' , `[ - ]` , true)
 			      .addField('``الغه التي  تبرمجت بها ☎️``' , `[ Java Script ]` , true)
