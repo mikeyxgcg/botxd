@@ -90,7 +90,7 @@ return;
  if(!message.member.hasPermission('ADMINISTRATOR')) return;
           var bc = new Discord.RichEmbed()
           .setAuthor(message.author.username, message.author.avatarURL)
-          .addField(' Server',{message.guild.name}, true)
+          .addField(' Server',{message guild.name}, true)
           .addField(' Sender ', ${message.author.username}!${message.author.discriminator}, true)
           .addField(' Message ', args)
           .setThumbnail(message.guild.iconURL)
