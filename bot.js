@@ -2473,4 +2473,61 @@ client.on('message', function(message) {
 	}
 });
 })
+
+client.on('message', message => {
+var prefix = "-";
+       if(message.content === prefix + "cl") {
+                           if(!message.channel.guild) return message.reply('** This command only for servers**');
+ 
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' **تم قفل الشات*');
+              message.channel.overwritePermissions(message.guild.id, {
+            SEND_MESSAGES: false
+ 
+              }).then(() => {
+                  message.reply("**تم قفل الشات :white_check_mark: **")
+              });
+                }
+//FIRE BOT
+    if(message.content === prefix + "op") {
+                        if(!message.channel.guild) return message.reply('** This command only for servers**');
+ 
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**تم فتح الشات**');
+              message.channel.overwritePermissions(message.guild.id, {
+            SEND_MESSAGES: true
+ 
+              }).then(() => {
+                  message.reply("**تم فتح الشات :white_check_mark:**")
+              });
+    }
+       
+});
+
+client.on('message', message => {
+    var prefix = "-";
+   
+        if (message.author.id === client.user.id) return;
+        if (message.guild) {
+       let embed = new Discord.RichEmbed()
+        let args = message.content.split(' ').slice(1).join(' ');
+    if(message.content.split(' ')[0] == prefix + 'bc') {
+        if (!args[1]) {
+    message.channel.send("**اكتب شي بعد الكوماند**");
+    return;
+    }
+            message.guild.members.forEach(m => {
+       if(!message.member.hasPermission('ADMINISTRATOR')) return;
+                var bc = new Discord.RichEmbed()
+                .addField('» السيرفر :', `${message.guild.name}`)
+                .addField('» المرسل : ', `${message.author.username}#${message.author.discriminator}`)
+                .addField(' » الرسالة : ', args)
+                .setColor('#ff0000')
+                // m.send(`[${m}]`);
+                m.send(`${m}`,{embed: bc});
+            });
+        }
+        } else {
+            return;
+        }
+    });
+
 client.login(process.env.BOT_TOKEN);
