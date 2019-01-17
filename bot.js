@@ -77,20 +77,19 @@ message.channel.send("**تم الارسال الحساب في الخاص | ☑ *
 }});
 
 client.on('message', message => {
-	var prefix = "-"
   if (message.guild) {
  let embed = new Discord.RichEmbed()
   let args = message.content.split(' ').slice(1).join(' ');
 if(message.content.split(' ')[0] == prefix + 'bc') {
   if (!args[1]) {
-message.channel.send("Usage: -bc [الرسالة]");
+message.channel.send("Usage: !bc [message]");
 return;
 }
       message.guild.members.forEach(m => {
  if(!message.member.hasPermission('ADMINISTRATOR')) return;
           var bc = new Discord.RichEmbed()
           .setAuthor(message.author.username, message.author.avatarURL)
-          .addField(' Server',{message guild.name}, true)
+          .addField(' Server', ${message.guild.name}, true)
           .addField(' Sender ', ${message.author.username}!${message.author.discriminator}, true)
           .addField(' Message ', args)
           .setThumbnail(message.guild.iconURL)
