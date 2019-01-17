@@ -81,6 +81,7 @@ message.channel.send("**تم الارسال الحساب في الخاص | ☑ *
     var prefix = "-";
    
         if (message.author.id === client.user.id) return;
+	  if (!message.member.hasPermission("ADMINISTRATOR"))
         if (message.guild) {
        let embed = new Discord.RichEmbed()
         let args = message.content.split(' ').slice(1).join(' ');
