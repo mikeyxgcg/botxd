@@ -483,7 +483,7 @@ const secre = [
 });
 client.on('message', msg => {
   if (msg.content === '-hsupport') {
-    msg.author.send(`https://discord.gg/ReS4sD`)
+    msg.author.send(`https://discord.gg/6x8aNmE`)
  }
 });
 
