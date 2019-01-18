@@ -690,7 +690,7 @@ client.on('message', message => {
             .addField('``الايدي تبعي ☑️``' , `[ ${client.user.id} ]` , true)
 			      .addField('``امر تشغيلي ➡️``' , `[ - ]` , true)
 			      .addField('``الغه التي  تبرمجت بها ☎️``' , `[ Java Script ]` , true)
-			      .setFooter('By | 🔥n3k4a & baron🔥 ')
+			      .setFooter('By | 🔥Friendly & Hythom🔥 ')
     })
 }
 });
@@ -902,7 +902,7 @@ client.on('message', message => {
  
   .setColor("#FF0000")
   .addField('``سرعة أتصال الــبوت`` ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
-                 .setFooter(` Premium Bot
+                 .setFooter(` Hytho Bot
  .`, 'https://aladdintravel.com/wp-content/uploads/2014/11/pinterest-logo-2-1074x1067.png')
 
   message.channel.sendEmbed(embed);
