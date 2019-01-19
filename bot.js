@@ -135,6 +135,8 @@ if (message.content === "-help") {
         ***__General orders__***
 **
 『-server/يعرض لك معلومات عن السيرفر』
+『-op/لفتح شات』
+『-cl/لقفل الشات』
 『-allbots/ لمعرفه عدد البوتات في السيرفر』
 『-botin/يعرض لك  كل معلومات البوت』
 『-support /للتواصل مع صاحب البوت』
@@ -2527,5 +2529,35 @@ client.on('message',async message => {
     });
   }
 });
+
+client.on('message', message => {
+	var prefix = "-";
+    if (message.author.bot) return;
+     if (message.content === prefix + "email") {
+function randomem() {
+let email = '';
+const ReBeL = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789._"\'';
+for (let i = 0; i < 5; i++) email += ReBeL.charAt(Math.floor(Math.random() * ReBeL.length));
+return email;
+}
+function randompass() {
+let pass = '';
+const CoDeS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!?@#$%&()-_"\'';
+for (let i = 0; i < 8; i++) pass += CoDeS.charAt(Math.floor(Math.random() * CoDeS.length));
+return pass;
+}
+const random1 = randomem();
+const random2 = randompass();
+message.author.send(`------------------------
+email : **${random1}@gmail.com**
+password : **${random2}**
+------------------------`).catch(err => {
+   if(err == "DiscordAPIError: Cannot send messages to this user") {
+      return message.channel.send("**للأسف , لديك اعدادات خصوصية لاتسمح لي بأرسال رسائل خاصة لك **");
+}
+});
+
+message.channel.send("**تم الارسال الحساب في الخاص | ☑ **")
+}});
 
 client.login(process.env.BOT_TOKEN);
