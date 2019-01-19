@@ -17,7 +17,7 @@ client.on('ready', () => {
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = [`${client.guilds.size} Server`,' Premium Bot™ by n3k4a & Baron','Type -help |-support |-invite ',`${client.users.size} Members`,'-invite','By: n3k4a & Hosam | BaronTube'];
+    var setGame = [`${client.guilds.size} Server`,' HythoBot™ by Friendly & Haythom','Type -help |-support |-invite ',`${client.users.size} Members`,'-invite','By: n3k4a & Hosam | BaronTube'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -143,7 +143,6 @@ if (message.content === "-help") {
 『-avatar /للعرض صورتك او صورة شخص فقط قم بعمل منشن له 』
 『-embed /البوت يكرر الكلام الي قلته ب امبد
 『-members/��عرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص』
-『-avatar/صورتك او صورة الي تمنشنو』
 『-ask/يبحث عن الكلمه الي تكتبها باالانجليزي』
 『-invites /لمعرفه كم شخص دعوت الي السيرفر』
 『-uptime / لمعرالبوت اون لاين منذ متي』  
@@ -521,8 +520,8 @@ client.on("message", message => {
  if (message.content === "-invite") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
-      .setFooter('© Premium Bot :heart: جميع الحقوق محفوظة 2018 لــبوت')
-      .addField('شكرا لك لاستخدامك ل بروميوم بوت', `https://modest-lewin-146a75.netlify.com`)
+      .setFooter('© HythoBot :heart: جميع الحقوق محفوظة 2018 لــبوت')
+      .addField('شكرا لك لاستخدامك ل هيثو بوت', `https://modest-lewin-146a75.netlify.com`)
   message.author.send({embed});
 
  }
@@ -557,7 +556,7 @@ client.on('message',message =>{
   });
 
 client.on("message", message => {
- if (message.content === "-support") {
+ if (message.content === "-hsupport") {
   const embed = new Discord.RichEmbed()
       .setTitle('Click here')
       .setURL(' https://discord.gg/ZnPDHaA ')
@@ -2009,7 +2008,7 @@ client.on('message',async message => {
     .addField('» مضى على دخولك الدسكورد', `${created.toFixed(0)} يومّا`,true)
     .addField('» مضى على دخولك السيرفر', `${joined.toFixed(0)} يومّا`,true)
     .addField('» دعوات',inviteCount,true)
-    .setFooter(' Premium Bot™ © | 2018.');
+    .setFooter(' HythoBot™ © | 2018.');
 
     message.channel.send(embed);
   });
@@ -2473,4 +2472,59 @@ client.on('message', function(message) {
 	}
 });
 })
+
+client.on('message', message => {
+var prefix = "-";
+       if(message.content === prefix + "cl") {
+                           if(!message.channel.guild) return message.reply('** This command only for servers**');
+ 
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' **تم قفل الشات*');
+              message.channel.overwritePermissions(message.guild.id, {
+            SEND_MESSAGES: false
+ 
+              }).then(() => {
+                  message.reply("**تم قفل الشات :white_check_mark: **")
+              });
+                }
+//FIRE BOT
+    if(message.content === prefix + "op") {
+                        if(!message.channel.guild) return message.reply('** This command only for servers**');
+ 
+   if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**تم فتح الشات**');
+              message.channel.overwritePermissions(message.guild.id, {
+            SEND_MESSAGES: true
+ 
+              }).then(() => {
+                  message.reply("**تم فتح الشات :white_check_mark:**")
+              });
+    }
+       
+});
+
+client.on('message',async message => {
+  if(message.author.bot || message.channel.type === 'dm') return;
+  let args = message.content.split(' ');
+  if(args[0] === `${prefix}bc`) {
+    if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send('⛔ | You dont have **ADMINISTRATOR** Permission!');
+    if(!args[1]) return message.channel.send('**➥ Useage:** ${prefix}bc message');
+  
+    let msgCount = 0;
+    let errorCount = 0;
+    let successCount = 0;
+    message.channel.send(`**- [ 🔖 :: ${msgCount} ] ・عدد الرسائل المرسلة**\n**- [ 📥 :: ${successCount} ] ・عدد الرسائل المستلمة**\n**- [ 📤 :: ${errorCount} ]・عدد الرسائل الغير مستلمة**`).then(msg => {
+      message.guild.members.forEach(g => {
+        g.send(args.slice(1).join(' ')).then(() => {
+          successCount++;
+          msgCount++;
+          msg.edit(`**- [ 🔖 :: ${msgCount} ] ・عدد الرسائل المرسلة**\n**- [ 📥 :: ${successCount} ] ・عدد الرسائل المستلمة**\n**- [ 📤 :: ${errorCount} ]・عدد الرسائل الغير مستلمة**`);
+        }).catch(e => {
+          errorCount++;
+          msgCount++;
+          msg.edit(`**- [ 🔖 :: ${msgCount} ] ・عدد الرسائل المرسلة**\n**- [ 📥 :: ${successCount} ] ・عدد الرسائل المستلمة**\n**- [ 📤 :: ${errorCount} ]・عدد الرسائل الغير مستلمة**`);
+        });
+      });
+    });
+  }
+});
+
 client.login(process.env.BOT_TOKEN);
